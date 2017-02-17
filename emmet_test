@@ -1,0 +1,72 @@
+mb
+margin-bottom: ;
+margin-top: ;
+margin: ;
+padding: ;
+padding-bottom: ;
+pb
+
+pt
+px
+> horizontal / height
+
+
+line height
+lh
+line-height: ;
+
+
+variable grid loop using :"col"
+
+p2e
+
+oh
+overflow: hidden;
+oy
+overflow-y: hidden;
+ox
+overflow-x: hidden;
+oa
+overflow: auto;
+
+
+/*
+   Use X/Y for margins because h universally can be confused with height in emmet & other abbreviations
+   also, axis commonly being used in x/y
+ */
+
+.h1 declare font sizes
+
+// display
+dn
+dt
+dtc
+db
+di
+dib
+df
+
+
+
+
+f2e
+
+
+fw
+font-weight: ;
+
+fs =
+font-style: italic;
+
+
+
+
+width: ;
+height: ;
+
+font-weight: ;
+line-height:
+;
+
+z100
+z-index: 2;
