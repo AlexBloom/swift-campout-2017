@@ -81,6 +81,8 @@
 //Margins
 .m-0 {margin:0;}
 
+.mt-n-m {margin-top:-$space-m;}
+.mt-n-l {margin-top:-$space-l;}
 
 .m-n-xs {margin:-$space-xs;}
 .m-n-s  {margin:-$space-s;}

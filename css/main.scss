@@ -18,9 +18,17 @@ visibility: visible;
 
 
 
+#plan-container{
+  background-image:url({{site.baseurl}}/img/map.jpg);
 
+}
 
-
+#campout-nav{
+  right:-16em;
+  @include breakpoint(l){
+    right:0;
+  }
+}
 
 .border-dotted{
   border-style:dotted;
@@ -34,15 +42,21 @@ visibility: visible;
 
 
 .pill-l{
-  border-top-left-radius: 1.5em;
-  border-bottom-left-radius: 1.5em;
-  border-width:2px;
+  //border-top-left-radius: 1.5em;
+  //border-bottom-left-radius: 1.5em;
+  //border-width:2px;
 }
 .pill-r{
-  border-top-right-radius: 1.5em;
-  border-bottom-right-radius: 1.5em;
-  border-width:2px;
+  //border-top-right-radius: 1.5em;
+  //border-bottom-right-radius: 1.5em;
+  //border-width:2px;
 }
+
+.pill-l.active, .pill-r.active, .button.active{
+  background-color:$brown;
+  color:$cream;
+}
+
 
 
 .bg-cover{

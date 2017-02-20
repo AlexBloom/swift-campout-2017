@@ -6,7 +6,11 @@ $color-list: (
 "brown"  #342921
 );
 
+$cream: #f0f2db;
+$brown: #342921;
+
 @each $value in $color-list {
+
   .#{nth($value, 1)} {
     color: nth($value, 2);
   }

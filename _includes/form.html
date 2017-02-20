@@ -1,0 +1,73 @@
+
+<form id="new-camper-form" action="#">
+  <div>
+    <h3>Profile</h3>
+    <section>
+      <label for="username">Username</label>
+      <input id="username" type="text">
+      <label for="email">Email</label>
+      <input id="email" type="text">
+      <label for="name">Name*</label>
+      <input id="name" type="text">
+      <label for="location">Location*</label>
+      <input id="location" type="text">
+      <input id="nope" type="radio"><label for="nope">Nope, this is my first time and I'm pumped.</label>
+      <input id="yeah" type="radio"><label for="yeah">Heck Yeah, I'm a bike camper exraordinairre!</label>
+      <p>(*) Mandatory</p>
+    </section>
+    <h3>Connect</h3>
+    <section>
+      <label for="campout-location">Where are you going for Swift Campout?</label>
+      <input id="campout-location" type="text">
+      <label for="none">Come Along With me! My Swift Campout is open to the community.</label>
+      <input id="public-yes" type="radio"><label for="public-yes">Yes</label>
+      <input id="public-no" type="radio"><label for="public-no">No</label>
+      <p>Share your blackriver.cc Route</p>
+      <label for="blackriver">Paste the URL to your adventure here! If your Campout is open to the public, add a Facebook event link to your Blackriver.cc event for folks to connect with you. </label>
+      <input id="blackriver" type="text">
+      <p>(*) Mandatory</p>
+    </section>
+    <h3>Field Notes</h3>
+    <section>
+      <label for="weirdest-thing-seen">What's the weirdest thing you've ever seen on the side of the road while riding?</label>
+      <input id="weirdest-thing-seen" type="text">
+      <label for="three-words-bike">In three words describe the bicycle you'll be riding.</label>
+      <input id="three-words-bike" type="text">
+      <label for="anywhere-in-world">If you could go anywhere in the world to ride bikes, where would it be?</label>
+      <input id="anywhere-in-world" type="text">
+      <label for="one-word-bikepacking">Use one word to describe bike camping</label>
+      <input id="one-word-bikepacking" type="text">
+    </section>
+  </div>
+</form>
+
+<script>
+  var form = $("#new-camper-form");
+    // form.validate({
+    //   errorPlacement: function errorPlacement(error, element) { element.before(error); },
+    //   rules: {
+    //       confirm: {
+    //           equalTo: "#password"
+    //       }
+    //   }
+    // });
+  form.children("div").steps({
+    headerTag: "h3",
+    bodyTag: "section",
+    transitionEffect: "slideLeft",
+    // onStepChanging: function (event, currentIndex, newIndex)
+    // {
+    //     form.validate().settings.ignore = ":disabled,:hidden";
+    //     return form.valid();
+    // },
+    // onFinishing: function (event, currentIndex)
+    // {
+    //     form.validate().settings.ignore = ":disabled";
+    //     return form.valid();
+    // },
+    // onFinished: function (event, currentIndex)
+    // {
+    //     alert("Submitted!");
+    // }
+  });
+</script>

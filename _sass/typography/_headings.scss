@@ -10,7 +10,7 @@ h1 {
   font-size: $h1;
   //font-weight:600;
   @include breakpoint(m) {
-    font-size: 3rem;
+    font-size: 4rem;
   };
 }
 
@@ -30,13 +30,34 @@ h3 {
   };
 }
 
+// .type-grow{
+//   font-size: 2rem;
+//   line-height: $leading-solid;
+//   @include breakpoint(m) {
+//     font-size:5vw;
+//   };
+//   @include breakpoint(xl) {
+//     font-size:7rem;
+//   };
+// }
+
+
+$min-font-size: 24;
+$max-font-size: 48;
+$min-screen-size: 512;
+$max-screen-size: 1024;
+
+//font-size: calc( #{$min-font-size}px + (#{$max-font-size} - #{$min-font-size}) * (100vw - #{$min-screen-size}px) / (#{$max-screen-size} - #{$min-screen-size}) );
+
 .type-grow{
-  font-size: 2rem;
-  line-height: $leading-solid;
-  @include breakpoint(m) {
-    font-size:5vw;
-  };
-  @include breakpoint(xl) {
-    font-size:7rem;
-  };
+  font-size:2rem;
+  @include breakpoint(m){
+    font-size:3rem;
+  }
+  @include breakpoint(l){
+    font-size:4rem;
+  }
+  @include breakpoint(xl){
+    font-size:6rem;
+  }
 }
