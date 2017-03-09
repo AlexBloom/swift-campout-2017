@@ -27,6 +27,7 @@
   <script src="https://use.typekit.net/frh7reh.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
   <script src="/js/jquery.steps.min.js"></script>
   <script src="/js/wow.min.js"></script>
   <script>
@@ -139,14 +140,6 @@
         <span class="inline-block cream py-xs">Sign up</span>
       </a>
     </div>
-    <!-- <div class="col">
-      <a href="#" class="leading-text inline-block pt-xs px-s bold caps h6">
-          <svg class="block" style="transform:translateY(2px);" fill="#000000" height="24" width="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0h24v24H0z" fill="none"/>
-              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-          </svg>
-      </a>
-    </div> -->
   </div>
   <nav id="campout-nav" class="fixed z4 my-l px-l" style="top:50%; transform:translateY(-50%);">
     <ul class="list-reset text-right bold">
@@ -161,43 +154,25 @@
   </nav>
 </header>
 
-        <script>
-  //On scroll call the draw function
-  $(window).scroll(function() {
-    drawLines();
-  });
-
-  //If you have more than one SVG per page this will pick it up
-  function drawLines(){
-    $.each($("path"), function(i, val){
-      var line = val;
-      drawLine($(this), line);
-    });
-  }
-
-  //draw the line
-  function drawLine(container, line){
-  var length = 0;
-  var pathLength = line.getTotalLength();
-  var distanceFromTop = container.offset().top - $(window).scrollTop() +200;
-  var percentDone = 1 - (distanceFromTop / $(window).height());
-  length = percentDone * pathLength;
-  line.style.strokeDasharray = [length,pathLength].join(' ');
-  console.log("strokeDasharray: "+[length,pathLength].join(' '));
-  }
-</script>
-<section id="cover" class="pb-xl" style="background:linear-gradient(180deg, #d57427, #f0f2db)">
+        <section id="cover" class="pb-xl" style="background:linear-gradient(180deg, #d57427, #f0f2db)">
   <div class="py-xxl px-xl max-width-m mx-auto">
     <img src="img/swiftcampout_logo_2017.svg" alt="">
   </div>
 </section>
 
-<div class="overflow-hidden text-center" style="height:1196px;">
+<div class="relative overflow-hidden text-center" style="height:1196px;">
   <svg class="olive" viewbox="0 0 400 1200" height="1200" width="400">
     <path id="loop" fill="none" stroke="currentColor" stroke-width="2px" stroke-miterlimit="10" d="M200,0v463.128c0,0,0,136.872-103.355,136.872
       C0.031,600,3.758,472.282,64.662,427.284c122.509-90.513,208.952-45.151,270.449,83.842
       c72.538,152.153,35.975,279.496-29.842,213.367C258.615,677.618,200,652.119,200,800.612V1200"/>
   </svg>
+  <div class="absolute  max-width-xs wow fadeIn" style="top:5%; left:50%; transform:translateX(-8rem);">
+    <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:36.342592592592595% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BE8muTqiMtg/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Spencer Brown (@spencercbrown)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-05-03T13:34:37+00:00">May 3, 2016 at 6:34am PDT</time></p></div></blockquote>
+    <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+  </div>
+  <div class="absolute  max-width-xs wow fadeIn" style="top:70%; left:50%; transform:translateX(-8rem);">
+    <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:33.33333333333333% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BHPgdDDAcfY/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Far Ride Magazine (@farridemag)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-06-29T14:48:12+00:00">Jun 29, 2016 at 7:48am PDT</time></p></div></blockquote> <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+  </div>
 </div>
 <section id="hello" class="text-center pb-xl px-m">
   <div class="circle wow fadeIn border border-olive olive mx-auto mb-xl number-node">
@@ -213,13 +188,16 @@
   </div>
 </section>
 
-<div class="overflow-hidden text-center mx-auto col-12 measure" style="height:1196px; ">
+<div class="relative overflow-hidden text-center mx-auto col-12 measure" style="height:1196px; ">
   <svg class="poppy" viewbox="0 0 400 1200" height="1200" width="400">
     <path fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" d="M200,0v224.574c0,28.166-22.876,50.999-51.042,51H64.5
     	c-28.166,0-51,22.833-51,51s22.834,51,51,51h251c28.166,0,51,22.833,51,51s-22.834,51-51,51h-216c-28.166,0-51,22.833-51,51
     	s22.834,51,51,51h177.087c28.166,0,51,22.833,51,51s-22.834,51-51,51H134.5c-28.166,0-51,22.833-51,51c0,28.168,22.834,51,51,51
     	h120.042c28.166,0,51,22.834,51,51c0,28.168-22.834,51-51,51H251c-28.167,0-51.001,22.834-51,51V1200"/>
   </svg>
+  <div class="absolute max-width-xs wow fadeIn" style="top:10%; left:50%; transform:translateX(-8rem);">
+    <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BHIX8UbjzP6/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by jaredharber (@jaredharber)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-06-26T20:19:08+00:00">Jun 26, 2016 at 1:19pm PDT</time></p></div></blockquote> <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+  </div>
 </div>
 <section id="signup" class="text-center pb-xl">
   <div class="circle wow fadeIn poppy border-poppy border mx-auto mb-xl number-node">
@@ -261,6 +239,7 @@
 
           // Prevent the anchor's default click action
           e.preventDefault();
+
         });
       });
     });
@@ -769,7 +748,7 @@
 
 </section>
 
-<div class="overflow-hidden text-center" style="height:1196px;">
+<div class="relative overflow-hidden text-center" style="height:1196px;">
   <svg class="olive" viewbox="0 0 400 1200" height="1200" width="400">
     <path fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" d="M200,0c0,60.5,7.671,65.06,7.5,83.5c-0.131,14.114-14,22.866-14,37
     	c0,19.262,12.84,22.807,11,41c-1.57,15.533-16.537,33.53-53.43,47.749c-21.379,8.24-43.245,1.6-70.297,8.6
@@ -784,6 +763,13 @@
     	c-3.617,14.519,14.216,11.578,25.493,9.242c6.971-1.444,15.569,0.088,19.39,6.336c4.553,7.446-0.012,14.408-4.667,20.333
     	c-18.333,23.334-48.984,5.021-67,24.002c-18.666,19.666-66.544,12.121-69.667,38.666C188.933,1083.832,200,1144.504,200,1200"/>
   </svg>
+  <div class="absolute right-l max-width-xs wow fadeIn" style="top:10%; left:50%; transform:translateX(-12rem);">
+    <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#f0f2db; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:33.33333333333333% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BHGC_5qgqPw/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by J. Bené Romanceür Esq. (@ultraromance)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-06-25T22:37:39+00:00">Jun 25, 2016 at 3:37pm PDT</time></p></div></blockquote> <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+  </div>
+  <div class="absolute right-l max-width-xs wow fadeIn" style="top:70%; right:50%; transform:translateX(12rem);">
+    <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BHFMof7DrDj/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Gabe (@olgrumpy)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-06-25T14:42:36+00:00">Jun 25, 2016 at 7:42am PDT</time></p></div></blockquote>
+    <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+  </div>
 </div>
 <section id="plan" class="text-center pb-xl">
   <div class="circle wow fadeIn border border-olive mx-auto mb-xl number-node">
@@ -947,9 +933,7 @@
         </svg>
     </div>
     <div class="col col-4 p-m">
-      <!-- <div class="circle mx-auto border-brown shadow" style="width:4rem; height:4rem; border:1rem solid;">
-
-      </div> -->
+      <!-- Leave Space here for Tag Circle Dot Area -->
     </div>
     <div class="col col-4 relative" style="padding-top:38%;">
       <div class="absolute flex top-0 bottom-0 width-100">
@@ -1032,7 +1016,7 @@
   </div>
 </section>
 
-<div class="overflow-hidden text-center" style="height:1196px;">
+<div class="relative overflow-hidden text-center" style="height:1196px;">
   <svg class="orange" viewbox="0 0 400 1200" height="1200" width="400">
     <path fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" d="M200,0c0,68.5,4.32,102.586-10,148
     	c-15.922,50.494-63.139,76.481-101.123,111.002c-19.138,17.394-79.607,65.274-34.263,84.786
@@ -1049,6 +1033,12 @@
     	c-12.05,18.943-36.48,23.903-55.706,32.231c-20.772,8.998-34.721,23.76-40.699,45.908c-8.106,30.032,5.776,48.641,5.776,79.489
     	c0,25-10.008,27.831-10.008,70.331"/>
   </svg>
+  <div class="absolute right-l max-width-xs wow fadeIn" style="top:10%; right:50%;">
+    <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:33.24074074074074% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BKbFeMqhYQi/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Swift Industries (@swiftindustries)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-09-16T16:17:30+00:00">Sep 16, 2016 at 9:17am PDT</time></p></div></blockquote> <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+  </div>
+  <div class="absolute right-l max-width-xs wow fadeIn" style="top:50%; left:50%;">
+    <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:37.4537037037037% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BHGYAnSjtei/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by @morsow</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-06-26T01:41:15+00:00">Jun 25, 2016 at 6:41pm PDT</time></p></div></blockquote><script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+  </div>
 </div>
 <section id="share" class="text-center pb-xl px-m">
   <div class="circle wow fadeIn border border-orange mx-auto mb-xl number-node">
@@ -1071,20 +1061,93 @@
 </section>
 
 
-<section id="pack" class="relative z1 max-width-l mx-auto px-l" style="margin-top:800px; margin-bottom:-1200px;">
+<section id="pack" class="relative z1 max-width-l mx-auto px-l" style="margin-top:800px; margin-bottom:-1800px;">
   <div class="shadow-high text-center py-xl px-l bg-poppy white ">
     <h2 class="h3 caps bold">Friendly Reminder</h2>
     <p class="h2 m-h1 stormy caps py-xl">Before Packing Your Bike, Double Check Your List</p>
+    <p>First, pick your style:</p>
+    <nav class="tabs inline-block rounded overflow-hidden bg-cream border border-brown shadow">
+      <a class="caps bold py-s px-m  pill-l " href="#bikepacker">Bike Packer</a>
+      <a class="caps bold py-s px-m " href="#randolight">Rando Light</a>
+      <a class="caps bold py-s px-m  pill-r " href="#roadtourer">Road Tourer</a>
+    </nav>
+    <div id="bikepacker" class="">
+      <div class="product-slider">
+        <div>
+          <img src="img/2017_SC_bikepacker_01.jpg" alt="">
+          <ol>
+            <li><a href="">Item</a></li>
+            <li><a href="">Item</a></li>
+            <li><a href="">Item</a></li>
+          </ol>
+        </div>
+        <div>
+          <img src="img/2017_SC_bikepacker_02.jpg" alt="">
+          <ol>
+            <li><a href="">Item</a></li>
+            <li><a href="">Item</a></li>
+            <li><a href="">Item</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div id="randolight" class="">
+      <div class="product-slider">
+        <div>
+          <img src="img/2017_SC_randolight_01.jpg" alt="">
+          <ol>
+            <li><a href="">Item</a></li>
+            <li><a href="">Item</a></li>
+            <li><a href="">Item</a></li>
+          </ol>
+        </div>
+        <div>
+          <img src="img/2017_SC_randolight_02.jpg" alt="">
+          <ol>
+            <li><a href="">Item</a></li>
+            <li><a href="">Item</a></li>
+            <li><a href="">Item</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div id="roadtourer" class="">
+      <div class="product-slider">
+        <div>
+          <img src="img/2017_SC_roadtourer_01.jpg" alt="">
+          <ol>
+            <li><a href="">Item</a></li>
+            <li><a href="">Item</a></li>
+            <li><a href="">Item</a></li>
+          </ol>
+        </div>
+        <div>
+          <img src="img/2017_SC_roadtourer_02.jpg" alt="">
+          <ol>
+            <li><a href="">Item</a></li>
+            <li><a href="">Item</a></li>
+            <li><a href="">Item</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
     <h2>Don't have bike bags?</h2>
     <p><a href="http://builtbyswift.com/shop" class="caps">builtbyswift.com/shop</a></p>
   </div>
 </section>
 
-<div class="overflow-hidden text-center" style="height:1796px;">
+<div class="relative overflow-hidden text-center" style="height:1796px;">
   <svg class="brown" viewbox="0 0 400 1800" height="1800" width="400">
       <path fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" d="M208.738,0c0,0,0,42.5,0,82.5c0,198-203.738,156-203.738,432
       	c0,322,390,326,390,580c0,180-284.034,244.365-284.034,378.365c0,138,89.034,140.635,89.034,327.135"/>
   </svg>
+  <!-- <div class="absolute right-l max-width-xs wow fadeIn" style="top:10%; right:50%;">
+    <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:30.694444444444446% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BHGBXOwgH6a/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by @goldensaddlecyclery</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-06-25T22:23:21+00:00">Jun 25, 2016 at 3:23pm PDT</time></p></div></blockquote> <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+  </div>
+  <div class="absolute right-l max-width-xs wow fadeIn" style="top:80%; right:50%;">
+    <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:33.24074074074074% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BHLLD5ih1kE/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Tenkara Rod Co. (@tenkararodco)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-06-27T22:24:18+00:00">Jun 27, 2016 at 3:24pm PDT</time></p></div></blockquote>
+    <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+  </div> -->
 </div>
 
 <section id="sponsors" class="text-center px-l pb-xl">
@@ -1127,6 +1190,36 @@
   </div>
 
 </section>
+
+
+<script>
+  //On scroll call the draw function
+  $(window).scroll(function() {
+    drawLines();
+  });
+  $(document).ready(function(){
+    $('.product-slider').slick({});
+  });
+  //If you have more than one SVG per page this will pick it up
+  function drawLines(){
+    $.each($("path"), function(i, val){
+      var line = val;
+      drawLine($(this), line);
+    });
+  }
+
+
+  //draw the line
+  function drawLine(container, line){
+  var length = 0;
+  var pathLength = line.getTotalLength();
+  var distanceFromTop = container.offset().top - $(window).scrollTop() +200;
+  var percentDone = 1 - (distanceFromTop / $(window).height());
+  length = percentDone * pathLength;
+  line.style.strokeDasharray = [length,pathLength].join(' ');
+  console.log("strokeDasharray: "+[length,pathLength].join(' '));
+  }
+</script>
 
         <footer class="text-center py-xxl brown" style="background:linear-gradient(0deg, #d57427, #f0f2db)">
   <h1 class="type-grow stormy caps py-xl">Happy Trails!</h1>
