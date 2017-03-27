@@ -878,6 +878,18 @@ dl, dd, ol, ul, figure {
 .z4 {
   z-index: 4; }
 
+.zn1 {
+  z-index: -1; }
+
+.zn2 {
+  z-index: -2; }
+
+.zn3 {
+  z-index: -3; }
+
+.zn4 {
+  z-index: -4; }
+
 .top-0 {
   top: 0; }
 
@@ -2562,7 +2574,7 @@ td {
   width: 4rem;
   height: 4rem; }
 
-.pill-l.active, .pill-r.active, .button.active {
+.pill-l.active, .pill-r.active, .pill.active, .button.active {
   background-color: #342921;
   color: #f0f2db; }
 
