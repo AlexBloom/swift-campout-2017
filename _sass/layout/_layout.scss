@@ -35,6 +35,9 @@
 @media (min-width: 48em) and (max-width: 64em) {
   .m-l-hide { display: none !important }
 }
+@media (min-width: 64em){
+  .l-hide { display: none !important }
+}
 
 @media (min-width: 64em) and (max-width: 96em) {
   .l-xl-hide { display: none !important }

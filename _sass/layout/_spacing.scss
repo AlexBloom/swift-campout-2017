@@ -25,6 +25,17 @@
 .pt-xxl{padding-top:$space-xxl;}
 .pt-xxxl{padding-top:$space-xxxl;}
 
+.m-pt-xxl{
+  @include breakpoint(m){
+    padding-top:$space-xxl;
+  }
+}
+.m-pt-xxxl{
+  @include breakpoint(m){
+    padding-top:$space-xxxl;
+  }
+}
+
 .pb-xs {padding-bottom:$space-xs;}
 .pb-s  {padding-bottom:$space-s;}
 .pb-m  {padding-bottom:$space-m;}
@@ -40,6 +51,19 @@
 .py-xl {padding-top:$space-xl;padding-bottom:$space-xl;}
 .py-xxl{padding-top:$space-xxl;padding-bottom:$space-xxl;}
 .py-xxxl{padding-top:$space-xxxl;padding-bottom:$space-xxxl;}
+
+.m-py-xxl{
+  @include breakpoint(m){
+    padding-top:$space-xxl;
+    padding-bottom:$space-xxl;
+  }
+}
+.m-py-xxxl{
+  @include breakpoint(m){
+    padding-top:$space-xxxl;
+    padding-bottom:$space-xxxl;
+  }
+}
 
 .pl-xs {padding-left:$space-xs;}
 .pl-s  {padding-left:$space-s;}

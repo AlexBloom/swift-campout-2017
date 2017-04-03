@@ -1029,6 +1029,14 @@ dl, dd, ol, ul, figure {
 .pt-xxxl {
   padding-top: 16rem; }
 
+@media screen and (min-width: 48em) {
+  .m-pt-xxl {
+    padding-top: 8rem; } }
+
+@media screen and (min-width: 48em) {
+  .m-pt-xxxl {
+    padding-top: 16rem; } }
+
 .pb-xs {
   padding-bottom: 0.25rem; }
 
@@ -1077,6 +1085,16 @@ dl, dd, ol, ul, figure {
 .py-xxxl {
   padding-top: 16rem;
   padding-bottom: 16rem; }
+
+@media screen and (min-width: 48em) {
+  .m-py-xxl {
+    padding-top: 8rem;
+    padding-bottom: 8rem; } }
+
+@media screen and (min-width: 48em) {
+  .m-py-xxxl {
+    padding-top: 16rem;
+    padding-bottom: 16rem; } }
 
 .pl-xs {
   padding-left: 0.25rem; }
@@ -1475,6 +1493,9 @@ dl, dd, ol, ul, figure {
     display: none !important; } }
 @media (min-width: 48em) and (max-width: 64em) {
   .m-l-hide {
+    display: none !important; } }
+@media (min-width: 64em) {
+  .l-hide {
     display: none !important; } }
 @media (min-width: 64em) and (max-width: 96em) {
   .l-xl-hide {
