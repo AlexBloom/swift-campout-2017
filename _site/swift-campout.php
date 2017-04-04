@@ -19,7 +19,7 @@ get_header('campout'); ?>
 	<!-- INTRO -->
 	<section id="cover" class="px-l" style="background:linear-gradient(180deg, #d57427, #f0f2db)">
 	  <div class="pt-xl px-xl max-width-m mx-auto text-center">
-	    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/swiftcampout_logo_2017.svg" alt="">
+	    <img src="img/swiftcampout_logo_2017.svg" alt="">
 	  </div>
 	  <div class="text-center">
 	    <div class="circle wow fadeIn border border-brown brown mx-auto mt-xl mb-l number-node">
@@ -101,7 +101,7 @@ get_header('campout'); ?>
 	      <p class="h3">From today until roll-out on Swift Campout weekend, we'll be issuing challenges and special assignments, offering chances to win solid gear, and bringing you our favorites of bike camping culture&mdash;all through our Swift Campout mailing list. Register to be a part of it all!</p>
 	    </div>
 	  </div>
-	  <div class="bg-olive bg-cover bg-center p-l" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/campout/map.jpg)">
+	  <div class="bg-olive bg-cover bg-center p-l" style="background-image:url(img/map.jpg)">
 	    <div class="relative z4 measure mx-auto shadow-high relative">
 	      <div class="fit">
 	        <svg class="block fit width-100" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 600 200" enable-background="new 0 0 600 200" xml:space="preserve">
@@ -373,23 +373,9 @@ get_header('campout'); ?>
 	  <h2 class="h3 caps bold orange">Share the Stoke</h2>
 	  <p class="h1 type-grow stormy caps py-xl orange">#SWIFTCAMPOUT</p>
 	  <div class="slider mb-xl">
-
-	    <div class="max-width-l mx-auto">
+	    <div class="shadow-high measure mx-auto">
 	      <?php echo wdi_feed(array('id'=>'1')); ?>
 	    </div>
-			<style type="text/css" media="screen">
-				.wdi_feed_main_container *, .wdi_feed_main_container, .wdi_feed_container, .wdi_feed_wrapper{
-					background-color:transparent!important;
-					border-color:transparent!important;
-				}
-				#wdi_feed_0 .wdi_photo_wrap_inner{
-					border: 5px solid transparent!important;
-					background-color: transparent!important;
-				}
-				.wdi_load_more{
-					display:none!important;
-				}
-			</style>
 	  </div>
 	  <p>&amp; follow <a href="http://instagram.com/swiftindustries">@swiftindustries</a> for details</p>
 	</section>
@@ -440,7 +426,7 @@ get_header('campout'); ?>
 	      <div class="col col-12 m-col-6 p-m">
 	        <div class="max-width-s mx-auto border-top-thin poppy">
 	          <a href="https://www.blackriver.cc/rides/6660">
-	            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/blackriver_logo.gif" alt="">
+	            <img src="img/blackriver_logo.gif" alt="">
 	          </a>
 	        </div>
 	        <h3 class="brown">Pick Your Route</h3>
@@ -450,7 +436,7 @@ get_header('campout'); ?>
 	      <div class="col col-12 m-col-6 p-m">
 	        <div class="max-width-s mx-auto border-top-thin poppy">
 	          <a href="http://builtbyswift.com/shop/campout-2017">
-	            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/campout_merch.jpg" class="" alt="">
+	            <img src="img/campout_merch.jpg" class="" alt="">
 	          </a>
 	        </div>
 	        <h3 class="brown">Pack Your Bags</h3>
@@ -509,10 +495,10 @@ get_header('campout'); ?>
 	      </nav>
 	      <div id="roadtourer" class="cf">
 	          <div class="relative col-12 s-col-6 mx-auto py-s">
-	              <img class="fit" src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/2017_SC_roadtourer_01.jpg" alt="">
+	              <img class="fit" src="img/2017_SC_roadtourer_01.jpg" alt="">
 	          </div>
 	          <div class="col-12 py-s">
-	            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/2017_SC_roadtourer_02_dots.jpg" alt="">
+	            <img src="img/2017_SC_roadtourer_02_dots.jpg" alt="">
 	          </div>
 	            <ol class="text-left cf h5">
 	              <li class="col col-12 s-col-6"> <a href="http://builtbyswift.com/product-category/bags/panniers/">Swift Jr. Ranger Panniers </a> </li>
@@ -530,10 +516,10 @@ get_header('campout'); ?>
 	      </div>
 	      <div id="randolight" class="cf">
 	          <div class="relative col-12 s-col-6 mx-auto py-s">
-	              <img class="fit" src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/2017_SC_randolight_01.jpg" alt="">
+	              <img class="fit" src="img/2017_SC_randolight_01.jpg" alt="">
 	          </div>
 	          <div class="col-12 py-s">
-	            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/2017_SC_randolight_02_dots.jpg" alt="">
+	            <img src="img/2017_SC_randolight_02_dots.jpg" alt="">
 	          </div>
 	            <ol class="text-left cf h5">
 	              <li class="col col-12 s-col-6"> <a href="http://www.enlightenedequipment.com/"> Enlightened Equipment Quilt</a> </li>
@@ -548,10 +534,10 @@ get_header('campout'); ?>
 	      </div>
 	      <div id="bikepacker" class="cf">
 	          <div class="relative col-12 s-col-6 mx-auto py-s">
-	              <img class="fit" src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/2017_SC_bikepacker_01.jpg" alt="">
+	              <img class="fit" src="img/2017_SC_bikepacker_01.jpg" alt="">
 	          </div>
 	          <div class="col-12 py-s">
-	            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/2017_SC_bikepacker_02_dots.jpg" alt="">
+	            <img src="img/2017_SC_bikepacker_02_dots.jpg" alt="">
 	          </div>
 	            <ol class="text-left cf h5">
 	              <li class="col col-12 s-col-6"><a href="http://www.enlightenedequipment.com/">Enlightened Equipment Quilt</a></li>
