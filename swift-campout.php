@@ -25,10 +25,12 @@ get_header('campout'); ?>
 	    <div class="circle wow fadeIn border border-brown brown mx-auto mt-xl mb-l number-node">
 	      <span class="wow zoomIn sans text-center block pt-s h1 bold">01</span>
 	    </div>
-	    <h2 class="h3 caps bold brown">What is it?</h2>
+	    <h2 class="h3 caps bold brown"><?php the_field('overview_title') ?></h2>
 	  </div>
 	  <div class="measure serif mx-auto pb-l text-left">
-	    <p class="h3">Swift Campout is a global call to go bike-camping on June 24th, 2017. For the third year in a row thousands of adventurous spirits will load camping gear on their bikes for a weekend adventure.</p>
+	    <div class="h3">
+				<?php the_field('overview_text') ?>
+			</div>
 	  </div>
 	</section>
 	<div class="col-4 s-col-3 m-col-2 l-col-1 px-l mx-auto">
@@ -60,9 +62,11 @@ get_header('campout'); ?>
 	  <div class="circle wow fadeIn border border-poppy poppy mx-auto mb-l number-node">
 	    <span class="wow zoomIn sans text-center block pt-s h1 bold">02</span>
 	  </div>
-	  <h2 class="h3 caps bold poppy">Where's it happening?</h2>
+	  <h2 class="h3 caps bold poppy"><?php the_field('where_title') ?></h2>
 	  <div class="measure serif mx-auto pb-l text-left">
-	    <p class="h3"> Folks participate in all corners of the world: from Israel to Japan, and from LA to Montreal. You'll rep your home turf by adding your location when you sign up.</p>
+	    <div class="h3">
+				<?php the_field('where_text') ?>
+			</div>
 	  </div>
 	</section>
 	<div class="col-4 s-col-3 m-col-2 l-col-1 px-l mx-auto">
@@ -94,11 +98,11 @@ get_header('campout'); ?>
 	    <div class="circle wow fadeIn border border-olive olive mx-auto mb-l number-node">
 	      <span class="wow zoomIn sans text-center block pt-s h1 bold">03</span>
 	    </div>
-	    <h2 class="h3 caps bold olive">How do I Join?</h2>
+	    <h2 class="h3 caps bold olive"><?php the_field('signup_title') ?> </h2>
 	    <div class="measure serif mx-auto pb-l text-left">
-	      <p class="h3"> Sign in, pack up and skip town. We love it if you've cycled from the Arctic Circle to Patagonia, and we're even more excited if you've never dreamed of camping by bicycle before. </p>
-	      <p class="h3">Sign in with us to pack up and skip town by bicycle!<p>
-	      <p class="h3">From today until roll-out on Swift Campout weekend, we'll be issuing challenges and special assignments, offering chances to win solid gear, and bringing you our favorites of bike camping culture&mdash;all through our Swift Campout mailing list. Register to be a part of it all!</p>
+				<div class="h3">
+					<?php the_field('signup_text') ?>
+				</div>
 	    </div>
 	  </div>
 	  <div class="bg-olive bg-cover bg-center p-l" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/campout/map.jpg)">
@@ -248,7 +252,10 @@ get_header('campout'); ?>
 	          <div class="absolute flex top-0 bottom-0 width-100">
 	            <div class="my-auto width-100">
 	              <h4 class="caps bold olive p-0 m-0 leading-solid">Permit</h4>
-	              <h3 class="h1 condensed p-s olive p-0 m-0 leading-solid"> #[subscriber-chiclet listId="d69fad54d1" color="black" showlink="false" postfixtext=" "] </h3>
+	              <h3 class="h1 condensed p-s olive p-0 m-0 leading-solid">
+									 <?php the_field('subscriber_count') ?>
+									 <!-- #[subscriber-chiclet listId="d69fad54d1" color="black" showlink="false" postfixtext=" "]  -->
+								</h3>
 	            </div>
 	          </div>
 	        </div>
@@ -370,7 +377,7 @@ get_header('campout'); ?>
 	  <div class="circle wow fadeIn border border-orange mx-auto mb-xl number-node">
 	    <span class="wow zoomIn sans text-center block pt-s h1 bold orange">04</span>
 	  </div>
-	  <h2 class="h3 caps bold orange">Share the Stoke</h2>
+	  <h2 class="h3 caps bold orange"><?php the_field('share_title') ?></h2>
 	  <p class="h1 type-grow stormy caps py-xl orange">#SWIFTCAMPOUT</p>
 	  <div class="slider mb-xl">
 
@@ -433,29 +440,39 @@ get_header('campout'); ?>
 	    <div class="circle wow fadeIn border mx-auto mb-xl number-node poppy">
 	      <span class="wow zoomIn sans text-center block pt-s h1 bold">05</span>
 	    </div>
-	    <h2 class="h3 caps bold text-center poppy">Friendly Reminder</h2>
+	    <h2 class="h3 caps bold text-center poppy"><?php the_field('pack_plan_title') ?> </h2>
 	  </div>
 	  <div class=" px-m cf pb-xl">
 	    <div class="text-center pt-l pb-xxl  px-m col-12 l-col-10 mx-auto white">
 	      <div class="col col-12 m-col-6 p-m">
 	        <div class="max-width-s mx-auto border-top-thin poppy">
-	          <a href="https://www.blackriver.cc/rides/6660">
-	            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/blackriver_logo.gif" alt="">
+	          <a href="<?php the_field('plan_cta_link') ?>">
+	            <!-- <img src=" get_stylesheet_directory_uri(); /images/campout/blackriver_logo.gif" alt=""> -->
+							<img src="<?php the_field('plan_banner') ?>" alt="">
 	          </a>
 	        </div>
-	        <h3 class="brown">Pick Your Route</h3>
-	        <p class="h3 serif brown">Check out our route on Blackriver.cc, or make your own.</p>
-	        <p class="mt-l"><a href="https://www.blackriver.cc/rides/6660" class="button bg-poppy brown">Plan a Route</a></p>
+	        <h3 class="brown"><?php the_field('plan_title') ?> </h3>
+	        <div class="h3 serif brown"><?php the_field('plan_text') ?> </div>
+	        <p class="mt-l">
+						<a href="<?php the_field('plan_cta_link') ?>" class="button bg-poppy brown">
+							<?php the_field('plan_cta_text') ?>
+						</a>
+					</p>
 	      </div>
 	      <div class="col col-12 m-col-6 p-m">
 	        <div class="max-width-s mx-auto border-top-thin poppy">
-	          <a href="http://builtbyswift.com/shop/campout-2017">
-	            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/campout_merch.jpg" class="" alt="">
+	          <a href="<?php the_field('pack_cta_link') ?>">
+	            <!-- <img src=" get_stylesheet_directory_uri(); /images/campout/campout_merch.jpg" class="" alt=""> -->
+							<img src="<?php the_field('pack_banner') ?>" alt="">
 	          </a>
 	        </div>
-	        <h3 class="brown">Pack Your Bags</h3>
-	        <p class="h3 serif brown">Check out this years campout merch in our web store.</p>
-	        <p class="mt-l"><a href="https://builtbyswift.com/shop/campout-2017" class="button bg-poppy brown">Shop Campout</a></p>
+	        <h3 class="brown"><?php the_field('pack_title') ?> </h3>
+	        <div class="h3 serif brown"><?php the_field('pack_text') ?> </div>
+	        <p class="mt-l">
+						<a href="<?php the_field('pack_cta_link') ?>" class="button bg-poppy brown">
+							<?php the_field('pack_cta_text') ?>
+						</a>
+					</p>
 	      </div>
 	    </div>
 	  </div>
@@ -518,8 +535,8 @@ get_header('campout'); ?>
 	              <li class="col col-12 s-col-6"> <a href="http://builtbyswift.com/product-category/bags/panniers/">Swift Jr. Ranger Panniers </a> </li>
 	              <li class="col col-12 s-col-6"> <a href="http://builtbyswift.com/product-category/bags/handlebar-front-bags/">Swift Ozette Rando Bag </a> </li>
 	              <li class="col col-12 s-col-6"> <a href="http://builtbyswift.com/product-category/bags/adventure-organizing-bags/">Swift Wanderlust Packers </a> </li>
-	              <li class="col col-12 s-col-6"> <a href=""> </a> </li>
-	              <li class="col col-12 s-col-6"> <a href="http://www.enlightenedequipment.com/">Enlightened Equipment Quilt  </a> </li>
+	              <li class="col col-12 s-col-6"> <a href="http://builtbyswift.com/shop/swift-travel-kite/">Travel Kite </a> </li>
+	              <li class="col col-12 s-col-6"> <a href="">Enlightened Equipment Quilt  </a> </li>
 	              <li class="col col-12 s-col-6"> <a href="http://builtbyswift.com/shop/ultralight-mat/">Sea To Summit Ultralight Mat </a> </li>
 	              <li class="col col-12 s-col-6"> <a href="http://builtbyswift.com/shop/snow-peak-gigapower-auto-stove/">Snow Peak GigaPower Auto Stove </a> </li>
 	              <li class="col col-12 s-col-6"> <a href="http://builtbyswift.com/product-category/bike-camping-gear/">Maps </a> </li>
@@ -536,7 +553,7 @@ get_header('campout'); ?>
 	            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/2017_SC_randolight_02_dots.jpg" alt="">
 	          </div>
 	            <ol class="text-left cf h5">
-	              <li class="col col-12 s-col-6"> <a href="http://www.enlightenedequipment.com/"> Enlightened Equipment Quilt</a> </li>
+	              <li class="col col-12 s-col-6"> <a href=""> Enlightened Equipment Quilt</a> </li>
 	              <li class="col col-12 s-col-6"> <a href="http://builtbyswift.com/product-category/bags/adventure-organizing-bags/"> Swift Wanderlust Packers </a> </li>
 	              <li class="col col-12 s-col-6"> <a href="http://builtbyswift.com/shop/collapsible-pour-over-coffee-brewer/">Snow Peak Collapsable Pour Over </a> </li>
 	              <li class="col col-12 s-col-6"> <a href="http://builtbyswift.com/product-category/bags/handlebar-front-bags/">Swift Ozette Rando Bag </a> </li>
@@ -554,17 +571,17 @@ get_header('campout'); ?>
 	            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/campout/2017_SC_bikepacker_02_dots.jpg" alt="">
 	          </div>
 	            <ol class="text-left cf h5">
-	              <li class="col col-12 s-col-6"><a href="http://www.enlightenedequipment.com/">Enlightened Equipment Quilt</a></li>
+	              <li class="col col-12 s-col-6"><a href="">Enlightened Equipment Quilt</a></li>
 	              <li class="col col-12 s-col-6"><a href="http://builtbyswift.com/shop/ultralight-mat/">Sea To Summit Ultralight Mat</a></li>
 	              <li class="col col-12 s-col-6"><a href="http://builtbyswift.com/shop/sea-to-summit-escapist-tarp/">Sea To Summit Escapist Tarp</a></li>
 	              <li class="col col-12 s-col-6"><a href="http://builtbyswift.com/shop/collapsible-pour-over-coffee-brewer/">Snow Peak Collapsable Pour Over</a></li>
 	              <li class="col col-12 s-col-6"><a href="http://builtbyswift.com/shop/snow-peak-gigapower-auto-stove/">Snow Peak GigaPower Auto Stove</a></li>
 	              <li class="col col-12 s-col-6"><a href="http://builtbyswift.com/product-category/collections/cascade-collection/">Swift Cascade Series Water Bottle</a></li>
-	              <li class="col col-12 s-col-6"><a href="https://www.ovejanegrabikepacking.com/collections/handlebar-bags/products/lunchbox-handlebar-bag">Oveja Negra Lunchbox</a></li>
+	              <li class="col col-12 s-col-6"><a href="http://builtbyswift.com/shop/oveja-negra-lunchbox-handlebar-bag/">Oveja Negra Lunchbox</a></li>
 	              <li class="col col-12 s-col-6"><a href="http://builtbyswift.com/shop/teton-package/">Tenkara Fishing Rod</a></li>
-	              <li class="col col-12 s-col-6"><a href="https://www.ovejanegrabikepacking.com/collections/handlebar-bags/products/front-end-loader">Oveja Negra Front End Loader</a></li>
-	              <li class="col col-12 s-col-6"><a href="https://www.ovejanegrabikepacking.com/collections/seat-bags/products/gearjammer-seat-bag">Oveja Negra Gearjammer Seat Bag</a></li>
-	              <li class="col col-12 s-col-6"><a href="https://www.ovejanegrabikepacking.com/collections/handlebar-bags/products/chuckbucket-handlebar-bag">Oveja Negra Chuckbucket</a></li>
+	              <li class="col col-12 s-col-6"><a href="http://builtbyswift.com/shop/oveja-negra-front-end-loader/">Oveja Negra Front End Loader</a></li>
+	              <li class="col col-12 s-col-6"><a href="http://builtbyswift.com/shop/oveja-negra-gearjammer-seat-bag/">Oveja Negra Gearjammer Seat Bag</a></li>
+	              <li class="col col-12 s-col-6"><a href="http://builtbyswift.com/shop/oveja-negra-chuckbucket/">Oveja Negra Chuckbucket</a></li>
 	              <li class="col col-12 s-col-6"><a href="http://builtbyswift.com/product-category/bags/adventure-organizing-bags/">Swift Wanderlust Packers</a></li>
 	            </ol>
 	      </div>
@@ -577,7 +594,7 @@ get_header('campout'); ?>
 		<h2 class="h3 caps bold">Radness Made Possible</h2>
 		<div class="measure serif mx-auto pb-l text-left">
 			<p class="h3">We’ve teamed up with amazing partners those whose core values support independent makers, the verve of small companies, and the spirit that lures us into wilderness. We hope you enjoy the spirit they bring to swift campout! There are special treats, call-outs, and prizes for registered swift campers. </p>
-			<p class="h3">Stay tuned on <a href="http://instagram.com/builtbyswift" class="border-bottom-thin">instagram</a> for more!</p>
+			<p class="h3">Stay tuned on <a href="http://instagram.com/swiftindustries" class="border-bottom-thin">instagram</a> for more!</p>
 		</div>
 
 		<?php if( have_rows('partners') ) : ?>
@@ -587,7 +604,7 @@ get_header('campout'); ?>
 				<ul class="cf list-reset">
 				<?php while ( have_rows('partners') ) : ?>
 					<?php the_row(); ?>
-					<li class="col col-6 m-col-3 border-box p-m">
+					<li class="col col-12 m-col-6 border-box p-m">
 						<a href="<?php the_sub_field('partner_link'); ?>" target="_blank"><img src="<?php the_sub_field('partner_logo'); ?>" /></a>
 					</li>
 				<?php endwhile; ?>
@@ -597,7 +614,7 @@ get_header('campout'); ?>
 
 
 		<?php if( have_rows('sidekicks', 5802) ) : ?>
-			<div class="py-xl max-width-m mx-auto">
+			<div class="py-xl max-width-l mx-auto">
 				<h3>Sidekicks</h3>
 				<ul class="cf list-reset">
 				<?php while ( have_rows('sidekicks', 5802) ) : ?>
